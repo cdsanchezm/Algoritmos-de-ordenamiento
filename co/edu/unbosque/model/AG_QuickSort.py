@@ -1,4 +1,4 @@
-def QuickSort(list):
+def quickSort(list):
     left = []
     center = []
     right = []

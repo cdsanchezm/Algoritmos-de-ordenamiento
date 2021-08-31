@@ -1,4 +1,11 @@
 import random
+import co.edu.unbosque.model.AG_Burbuja as bubble
+import co.edu.unbosque.model.AG_Seleccion as sorting
+import co.edu.unbosque.model.AG_MergeSort as mergeSort
+import co.edu.unbosque.model.AG_QuickSort as quickSort
+import co.edu.unbosque.model.AG_Radix as radix
+
+
 def menu(totalNumbers, numbers, option):
     if option == 1:
         for x in range(totalNumbers):
@@ -28,17 +35,28 @@ option = int(input(" 1) Bubble Ordering     2) Sorting Ordering \n"
 if option == 1:
     print("you selected Bubble Ordering")
     print(numbers)
+    bubble.ordenamientoBurbuja(numbers)
+    print(numbers)
 if option == 2:
     print("you selected Sorting Ordering")
     print(numbers)
+    sorting.ordenamientoPorSeleccion(numbers)
+    print(numbers)
+
 if option == 3:
     print("you selected Radix Ordering ")
     print(numbers)
+    radix.radix(numbers)
+    print(numbers)
+
 if option == 4:
     print("you selected QuickSort Ordering")
     print(numbers)
+    quickSort.quickSort(numbers)
 if option == 5:
     print("MergeSort Ordering")
     print(numbers)
+    mergeSort.mergeSort(numbers)
 if option >= 6:
     print("plis select valid option ")
+

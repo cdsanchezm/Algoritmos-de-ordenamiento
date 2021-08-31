@@ -36,11 +36,3 @@ def menu(totalNumbers, numbers, option):
             a = random.randint(0, 10000)
             numbers.append(a)
 
-totalNumbers = int(input("---welcome to radix algorithm---\nenter the total of numbers to order"))
-numbers = []
-option = int(input(" 1) Manually enter numbers      2)generate numbers randomly"))
-menu(totalNumbers,numbers,option)
-totalNumbers = totalNumbers + 1
-print(numbers)
-radix(totalNumbers, numbers)
-print(numbers)
