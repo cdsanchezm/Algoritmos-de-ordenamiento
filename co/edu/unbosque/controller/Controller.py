@@ -44,12 +44,15 @@ if option == 1:
 if option == 2:
     print("you selected Sorting Ordering")
     sorting.ordenamientoPorSeleccion(numbers)
+
 if option == 3:
     print("you selected Radix Ordering ")
     radix.radix(totalNumbers, numbers)
+
 if option == 4:
     print("you selected QuickSort Ordering")
     quickSort.quickSort(numbers)
+
 if option == 5:
     print("you selected MergeSort Ordering")
     mergeSort.mergeSort(numbers)
