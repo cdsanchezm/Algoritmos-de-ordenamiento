@@ -17,6 +17,13 @@ def menu(totalNumbers, numbers, option):
             a = random.randint(0, 10000)
             numbers.append(a)
 
+def desorderPrint(number):
+    print(number)
+    print(f'Unordered number  -> {number}')
+
+def orderPrint(number):
+    print(f'Ordered number -> {number}')
+
 print("----- Welcome to workshop 1 ----- \n"
       " >Cardenas Cortes Luis Esteban\n"
       " >Cristian David Sanchez Malagon"
@@ -28,35 +35,38 @@ option = int(input(" 1) Manually enter numbers      2)generate numbers randomly"
 menu(totalNumbers,numbers,option)
 print("\n Plis select the algorithm to test :")
 
+
 option = int(input(" 1) Bubble Ordering     2) Sorting Ordering \n"
                    " 3) Radix Ordering      4) QuickSort Ordering \n"
                    " 5) MergeSort Ordering  "))
 
 if option == 1:
     print("you selected Bubble Ordering")
-    print(numbers)
+    desorderPrint(numbers)
     bubble.ordenamientoBurbuja(numbers)
-    print(numbers)
+    orderPrint(numbers)
+
 if option == 2:
     print("you selected Sorting Ordering")
-    print(numbers)
+    desorderPrint(numbers)
     sorting.ordenamientoPorSeleccion(numbers)
-    print(numbers)
-
+    orderPrint(numbers)
 if option == 3:
     print("you selected Radix Ordering ")
-    print(numbers)
+    desorderPrint(numbers)
     radix.radix(numbers)
-    print(numbers)
-
+    orderPrint(numbers)
 if option == 4:
     print("you selected QuickSort Ordering")
-    print(numbers)
-    quickSort.quickSort(numbers)
+    desorderPrint(numbers)
+    orderPrint(quickSort.quickSort(numbers))
+
 if option == 5:
     print("MergeSort Ordering")
-    print(numbers)
+    desorderPrint(numbers)
     mergeSort.mergeSort(numbers)
+    orderPrint(numbers)
+
 if option >= 6:
-    print("plis select valid option ")
+    print("please select valid option ")
 
