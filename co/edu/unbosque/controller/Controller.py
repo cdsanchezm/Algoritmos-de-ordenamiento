@@ -62,7 +62,7 @@ if option == 4:
     orderPrint(quickSort.quickSort(numbers))
 
 if option == 5:
-    print("MergeSort Ordering")
+    print("you selected MergeSort Ordering")
     desorderPrint(numbers)
     mergeSort.mergeSort(numbers)
     orderPrint(numbers)
