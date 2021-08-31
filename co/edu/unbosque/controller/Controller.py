@@ -4,6 +4,7 @@ import co.edu.unbosque.model.AG_Seleccion as sorting
 import co.edu.unbosque.model.AG_MergeSort as mergeSort
 import co.edu.unbosque.model.AG_QuickSort as quickSort
 import co.edu.unbosque.model.AG_Radix as radix
+import time
 
 
 def menu(totalNumbers, numbers, option):
@@ -39,12 +40,13 @@ print("\n Plis select the algorithm to test :")
 option = int(input(" 1) Bubble Ordering     2) Sorting Ordering \n"
                    " 3) Radix Ordering      4) QuickSort Ordering \n"
                    " 5) MergeSort Ordering  "))
-
+timestart = time.time()
 if option == 1:
     print("you selected Bubble Ordering")
     desorderPrint(numbers)
     bubble.ordenamientoBurbuja(numbers)
     orderPrint(numbers)
+
 
 if option == 2:
     print("you selected Sorting Ordering")
@@ -54,7 +56,7 @@ if option == 2:
 if option == 3:
     print("you selected Radix Ordering ")
     desorderPrint(numbers)
-    radix.radix(numbers)
+    radix.radix(totalNumbers,numbers)
     orderPrint(numbers)
 if option == 4:
     print("you selected QuickSort Ordering")
@@ -70,3 +72,5 @@ if option == 5:
 if option >= 6:
     print("please select valid option ")
 
+timeend = time.time()
+print(timeend - timestart)
