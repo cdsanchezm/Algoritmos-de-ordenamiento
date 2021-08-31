@@ -11,6 +11,6 @@ def quickSort(list):
                 center.append(i)
             elif i > pivot:
                 right.append(i)
-        return QuickSort(left)+center+QuickSort(right)
+        return quickSort(left)+center+quickSort(right)
     else:
       return list
